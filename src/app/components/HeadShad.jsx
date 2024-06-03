@@ -8,7 +8,7 @@ import {
 
 export const myArr = [
   {
-    title: "Lorem",
+    title: "Lorem1",
     heading:
       "orem ipsum dolor sit amet consectetur adipisicing elit. Soluta, ea?",
   },
@@ -32,27 +32,31 @@ export const myArr = [
 
 const HeadShad = () => {
   return (
-    <div className="max-w-[700px] px-3 mx-auto">
-      <h1 className="text-center text-5xl mb-5 pb-0">Shan-cn Accordion </h1>
-      <Accordion
-        type="single"
-        collapsible
-        className="w-full"
-        defaultValue="item-1"
-      >
-        {myArr.map((item, index) => (
-          <AccordionItem
-            key={index}
-            value={`item-${index + 1}`}
-            className="border-2  px-4 mb-5 border-r-2"
-          >
-            <AccordionTrigger>{item.title}</AccordionTrigger>
-            <AccordionContent className="gap-4">
-              {item.heading}
-            </AccordionContent>
-          </AccordionItem>
-        ))}
-      </Accordion>
+    <div className=" bg-black min-h-screen">
+      <div className="max-w-[700px] pb-10 px-3 mx-auto">
+        <h1 className="text-center text-white text-5xl mb-5 pt-8 pb-0">
+          Shad-cn Accordion{" "}
+        </h1>
+        <Accordion
+          type="single"
+          collapsible
+          className="w-full "
+          defaultValue="item-1"
+        >
+          {myArr.map((item, index) => (
+            <AccordionItem
+              key={index}
+              value={`item-${index + 2}`}
+              className="border-2 text-white rounded-xl  px-4 mb-5 border-r-2"
+            >
+              <AccordionTrigger>{item.title}</AccordionTrigger>
+              <AccordionContent className="gap-4">
+                {item.heading}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </div>
     </div>
   );
 };
